@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prizmora Gizlilik Politikası</title>
+<style>
+  :root {
+    --bg: #f6f7fb;
+    --surface: #ffffff;
+    --text: #1a1a2e;
+    --text-muted: #5b5f76;
+    --border: #e2e2ec;
+    --accent: #3d6fd9;
+    --accent-soft: #eaf0fd;
+    --accent-soft-border: #d3e0fa;
+
+    --font-heading: ui-serif, Georgia, 'Times New Roman', serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    --font-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', Consolas, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #11162a;
+      --surface: #171d36;
+      --text: #eef0fa;
+      --text-muted: #9aa0c0;
+      --border: #2a3055;
+      --accent: #6bcbff;
+      --accent-soft: #1c2748;
+      --accent-soft-border: #2c3b66;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #11162a;
+    --surface: #171d36;
+    --text: #eef0fa;
+    --text-muted: #9aa0c0;
+    --border: #2a3055;
+    --accent: #6bcbff;
+    --accent-soft: #1c2748;
+    --accent-soft-border: #2c3b66;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 36px;
+  }
+  .brand svg { width: 30px; height: 34px; flex-shrink: 0; }
+  .brand span {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.3px;
+  }
+
+  h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 5vw, 38px);
+    line-height: 1.15;
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+  .subtitle {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin: 0 0 8px;
+  }
+  .meta {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--text-muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin-top: 12px;
+  }
+
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin: 32px 0 40px;
+  }
+  nav.toc p {
+    margin: 0 0 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+  nav.toc ol {
+    margin: 0;
+    padding-left: 20px;
+    columns: 2;
+    column-gap: 24px;
+  }
+  nav.toc li { margin-bottom: 6px; break-inside: avoid; }
+  nav.toc a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14.5px;
+  }
+  nav.toc a:hover { color: var(--accent); text-decoration: underline; }
+
+  section {
+    margin: 40px 0;
+    scroll-margin-top: 16px;
+  }
+  section h2 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0 0 14px;
+  }
+  section h2 .num {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  section p, section li {
+    font-size: 15.5px;
+    color: var(--text);
+  }
+  section p { margin: 0 0 14px; }
+  section ul { margin: 0 0 14px; padding-left: 22px; }
+  section li { margin-bottom: 8px; }
+  strong { font-weight: 650; }
+
+  .callout {
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-soft-border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    font-size: 14.5px;
+    color: var(--text);
+  }
+  .callout p:last-child { margin-bottom: 0; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 0 0 14px;
+  }
+  caption { display: none; }
+  .table-wrap { overflow-x: auto; margin: 0 0 14px; }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+  td.mono { font-family: var(--font-mono); font-size: 13px; color: var(--text-muted); white-space: nowrap; }
+
+  a { color: var(--accent); }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 13.5px;
+    color: var(--text-muted);
+  }
+  footer a { color: var(--accent); }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="brand">
+    <svg viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="60,10 10,72 60,66" fill="#6bcbff" stroke="#0f1423" stroke-width="4" stroke-linejoin="round"/>
+      <polygon points="60,10 110,72 60,66" fill="#ffd93d" stroke="#0f1423" stroke-width="4" stroke-linejoin="round"/>
+      <polygon points="10,72 60,130 60,66" fill="#a29bfe" stroke="#0f1423" stroke-width="4" stroke-linejoin="round"/>
+      <polygon points="110,72 60,130 60,66" fill="#ff6b6b" stroke="#0f1423" stroke-width="4" stroke-linejoin="round"/>
+    </svg>
+    <span>PRIZMORA</span>
+  </div>
+
+  <h1>Gizlilik Politikası</h1>
+  <p class="subtitle">Bedo Games tarafından geliştirilen Prizmora mobil oyunu için geçerlidir.</p>
+  <div class="meta">Yürürlük tarihi: 17 Ağustos 2026</div>
+
+  <nav class="toc" aria-label="İçindekiler">
+    <p>İçindekiler</p>
+    <ol>
+      <li><a href="#giris">Giriş</a></li>
+      <li><a href="#topladigimiz-veriler">Topladığımız veriler</a></li>
+      <li><a href="#cihazda-veri">Cihazınızda tutulan veriler</a></li>
+      <li><a href="#reklamlar">Reklamlar (Google AdMob)</a></li>
+      <li><a href="#cocuklar">Çocukların gizliliği</a></li>
+      <li><a href="#guvenlik">Veri güvenliği</a></li>
+      <li><a href="#haklariniz">Haklarınız</a></li>
+      <li><a href="#degisiklikler">Politika değişiklikleri</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ol>
+  </nav>
+
+  <section id="giris">
+    <h2><span class="num">01</span> Giriş</h2>
+    <p>
+      Prizmora ("uygulama", "biz"), Bedo Games tarafından geliştirilen bir eşleştirme
+      (match-3) mobil oyunudur. Bu sayfa, uygulamayı kullandığınızda hangi verilerin
+      toplandığını, nasıl kullanıldığını ve haklarınızın neler olduğunu açıklar.
+    </p>
+    <div class="callout">
+      <p>
+        Kısaca: Prizmora'nın kendisi hesap oluşturmanızı istemez, kişisel bilgi
+        toplamaz. Oyun ilerlemeniz sadece kendi cihazınızda saklanır. Uygulama
+        içindeki reklamlar Google AdMob tarafından sağlanır ve bu reklamlar
+        kendi veri toplama süreçlerine sahiptir — aşağıda ayrıntılı anlatılıyor.
+      </p>
+    </div>
+  </section>
+
+  <section id="topladigimiz-veriler">
+    <h2><span class="num">02</span> Topladığımız veriler</h2>
+    <p>
+      Bedo Games olarak, Prizmora üzerinden doğrudan ad, e-posta, telefon numarası
+      gibi kimliğinizi tanımlayan herhangi bir bilgi toplamıyoruz. Uygulamanın
+      kaydolma, giriş yapma gibi bir hesap sistemi yoktur.
+    </p>
+    <p>
+      Uygulama içindeki reklam altyapısı (Google AdMob) çalışırken, reklamların
+      gösterilmesi ve ölçümlenmesi amacıyla kendi başına bazı teknik verileri
+      toplayabilir. Bu veri toplama süreci bizim değil, Google'ın sorumluluğundadır
+      ve aşağıdaki "Reklamlar" bölümünde açıklanmıştır.
+    </p>
+  </section>
+
+  <section id="cihazda-veri">
+    <h2><span class="num">03</span> Cihazınızda tutulan veriler</h2>
+    <p>
+      Oyun ilerlemeniz, cihazınızın yerel depolama alanında (<code>localStorage</code>)
+      tutulur ve hiçbir sunucuya gönderilmez:
+    </p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Veri</th><th>Ne için kullanılır</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Ulaşılan en yüksek bölüm</td><td>Bölüm haritasında ilerlemenizi göstermek</td></tr>
+          <tr><td>Can (enerji) sayısı ve yenilenme zamanı</td><td>Oynama hakkınızı hesaplamak</td></tr>
+          <tr><td>Günlük giriş serisi</td><td>Günlük ödül döngüsünü takip etmek</td></tr>
+          <tr><td>Ses açık/kapalı tercihi</td><td>Tercihinizi hatırlamak</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Bu veriler yalnızca sizin cihazınızda durur. Uygulamayı kaldırdığınızda
+      (silip yeniden yüklediğinizde) bu veriler de silinir, biz bir kopyasını
+      tutmayız çünkü bize hiç ulaşmaz.
+    </p>
+  </section>
+
+  <section id="reklamlar">
+    <h2><span class="num">04</span> Reklamlar (Google AdMob)</h2>
+    <p>
+      Prizmora, gelir elde etmek amacıyla Google AdMob reklam ağını kullanır.
+      Uygulama içinde iki tür reklam gösterilir:
+    </p>
+    <ul>
+      <li><strong>Ödüllü reklam:</strong> İzlemeyi tercih ettiğinizde ekstra can kazandırır. Tamamen isteğe bağlıdır.</li>
+      <li><strong>Geçiş reklamı:</strong> Bölüm tamamlama akışı içinde belirli aralıklarla gösterilir.</li>
+    </ul>
+    <p>
+      Google AdMob, reklamları göstermek ve ölçümlemek için reklam kimliği,
+      cihaz/işletim sistemi bilgisi, yaklaşık konum gibi teknik verileri
+      toplayabilir. Bu süreç Google'ın kendi gizlilik politikasına tabidir:
+    </p>
+    <ul>
+      <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a></li>
+      <li><a href="https://www.google.com/ads/preferences/" target="_blank" rel="noopener">Google Reklam Ayarları</a> — kişiselleştirilmiş reklamları buradan kapatabilirsiniz</li>
+    </ul>
+  </section>
+
+  <section id="cocuklar">
+    <h2><span class="num">05</span> Çocukların gizliliği</h2>
+    <p>
+      Prizmora, genel kitleye yönelik bir bulmaca oyunudur ve 13 yaş altı
+      çocuklardan bilerek kişisel veri toplamaz. Uygulamayı çocuğunuzun
+      kullandığını ve veri toplanmasıyla ilgili bir endişeniz olduğunu
+      düşünüyorsanız, aşağıdaki iletişim adresinden bize ulaşabilirsiniz.
+    </p>
+  </section>
+
+  <section id="guvenlik">
+    <h2><span class="num">06</span> Veri güvenliği</h2>
+    <p>
+      Doğrudan bizim topladığımız bir sunucu tarafı veri olmadığı için, veri
+      ihlali riski büyük ölçüde ortadan kalkar — çünkü aktarılan/depolanan
+      merkezi bir veritabanı yoktur. Reklam SDK'sı (Google AdMob) tarafındaki
+      veri güvenliği Google'ın kendi standartlarına tabidir.
+    </p>
+  </section>
+
+  <section id="haklariniz">
+    <h2><span class="num">07</span> Haklarınız</h2>
+    <p>
+      Cihazınızda tutulan tüm oyun verileri üzerinde tam kontrol sizdedir:
+    </p>
+    <ul>
+      <li>Uygulamayı kaldırarak tüm yerel verileri silebilirsiniz.</li>
+      <li>Cihazınızın ayarlarından uygulama verisini/önbelleğini temizleyerek ilerlemeyi sıfırlayabilirsiniz.</li>
+      <li>Kişiselleştirilmiş reklamları Google'ın reklam ayarları sayfasından kapatabilirsiniz.</li>
+    </ul>
+  </section>
+
+  <section id="degisiklikler">
+    <h2><span class="num">08</span> Politika değişiklikleri</h2>
+    <p>
+      Bu politika zaman zaman güncellenebilir (örneğin yeni bir özellik veya
+      reklam formatı eklendiğinde). Önemli değişikliklerde bu sayfadaki
+      "yürürlük tarihi" güncellenir. Uygulamayı kullanmaya devam etmeniz,
+      güncel politikayı kabul ettiğiniz anlamına gelir.
+    </p>
+  </section>
+
+  <section id="iletisim">
+    <h2><span class="num">09</span> İletişim</h2>
+    <p>
+      Bu politikayla ilgili sorularınız için bize ulaşabilirsiniz:
+    </p>
+    <p><a href="mailto:furkanarfat25@gmail.com">furkanarfat25@gmail.com</a></p>
+  </section>
+
+  <footer>
+    Prizmora — bir Bedo Games yapımı.
+  </footer>
+</div>
+</body>
+</html>
