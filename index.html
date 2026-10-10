@@ -218,7 +218,7 @@
 
   <h1>Gizlilik Politikası</h1>
   <p class="subtitle">Bedo Games tarafından geliştirilen Prizmora mobil oyunu için geçerlidir.</p>
-  <div class="meta">Yürürlük tarihi: 9 Ekim 2026</div>
+  <div class="meta">Yürürlük tarihi: 11 Ekim 2026</div>
 
   <nav class="toc" aria-label="İçindekiler">
     <p>İçindekiler</p>
@@ -227,7 +227,9 @@
       <li><a href="#topladigimiz-veriler">Topladığımız veriler</a></li>
       <li><a href="#cihazda-veri">Cihazınızda tutulan veriler</a></li>
       <li><a href="#reklamlar">Reklamlar (Unity Ads)</a></li>
-      <li><a href="#play-games">Google Play Games (sıralama ve bulut kaydı)</a></li>
+      <li><a href="#play-games">Google Play Games (bulut kaydı)</a></li>
+      <li><a href="#siralama">Sıralama ve kullanıcı adı</a></li>
+      <li><a href="#hesap-silme">Hesap ve veri silme</a></li>
       <li><a href="#cocuklar">Çocukların gizliliği</a></li>
       <li><a href="#guvenlik">Veri güvenliği</a></li>
       <li><a href="#haklariniz">Haklarınız</a></li>
@@ -245,8 +247,9 @@
     </p>
     <div class="callout">
       <p>
-        Kısaca: Prizmora'nın kendisi hesap oluşturmanızı istemez, kişisel bilgi
-        toplamaz. Oyun ilerlemeniz cihazınızda saklanır; Google Play Games ile oturum açarsanız Google hesabınıza da yedeklenir. Uygulama
+        Kısaca: Prizmora'yı oynamak için hesap açmanız gerekmez ve oyun ad, e-posta
+        gibi kişisel bilgilerinizi istemez. Sıralamaya katılmayı seçerseniz yalnızca
+        belirlediğiniz kullanıcı adı ve ulaştığınız en yüksek bölüm saklanır. Oyun ilerlemeniz cihazınızda saklanır; Google Play Games ile oturum açarsanız Google hesabınıza da yedeklenir. Uygulama
         içindeki reklamlar Unity Ads tarafından sağlanır ve bu reklamlar
         kendi veri toplama süreçlerine sahiptir — aşağıda ayrıntılı anlatılıyor.
       </p>
@@ -257,8 +260,10 @@
     <h2><span class="num">02</span> Topladığımız veriler</h2>
     <p>
       Bedo Games olarak, Prizmora üzerinden doğrudan ad, e-posta, telefon numarası
-      gibi kimliğinizi tanımlayan herhangi bir bilgi toplamıyoruz. Uygulamanın
-      kaydolma, giriş yapma gibi bir hesap sistemi yoktur.
+      gibi kimliğinizi tanımlayan herhangi bir bilgi toplamıyoruz. Oyunu oynamak için
+      kaydolmanız gerekmez. Sıralamaya katılmayı seçerseniz, kendi belirlediğiniz bir
+      kullanıcı adıyla isteğe bağlı bir sıralama hesabı oluşturulur (ayrıntılar aşağıdaki
+      "Sıralama ve kullanıcı adı" bölümünde).
     </p>
     <p>
       Uygulama içindeki reklam altyapısı (Unity Ads) çalışırken, reklamların
@@ -330,15 +335,12 @@
   </section>
 
   <section id="play-games">
-    <h2><span class="num">05</span> Google Play Games (sıralama ve bulut kaydı)</h2>
+    <h2><span class="num">05</span> Google Play Games (bulut kaydı)</h2>
     <p>
       Prizmora isteğe bağlı olarak Google Play Games Hizmetleri'ni kullanır. Google Play Games
       ile oturum açarsanız:
     </p>
     <ul>
-      <li><strong>Sıralama:</strong> Ulaştığınız en yüksek bölüm, Play Games profil adınız ve
-        profil resminizle birlikte "En Yüksek Bölüm" sıralamasında gösterilir. Sıralamada kimlerin
-        sizi görebileceğini Play Games profil ayarlarınızdan belirleyebilirsiniz.</li>
       <li><strong>Bulut kaydı:</strong> Oyun ilerlemeniz (bölüm, yıldızlar, kristaller, görevler,
         başarılar) Google hesabınıza bağlı "Kaydedilmiş oyunlar" alanına yedeklenir. Böylece
         telefon değiştirdiğinizde ilerlemeniz kaybolmaz. Ses, dil ve reklam tercihleri gibi
@@ -356,8 +358,63 @@
     </ul>
   </section>
 
+  <section id="siralama">
+    <h2><span class="num">06</span> Sıralama ve kullanıcı adı</h2>
+    <p>
+      Oyun içi sıralamaya katılmak tamamen isteğe bağlıdır. Sıralama ekranını ilk açtığınızda
+      bir kullanıcı adı seçmeniz istenir. Kullanıcı adı seçmezseniz sıralamaya hiçbir veri
+      gönderilmez.
+    </p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Veri</th><th>Kimler görebilir</th><th>Ne için kullanılır</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Seçtiğiniz kullanıcı adı</td><td>Tüm oyuncular</td><td>Sıralamada sizi göstermek</td></tr>
+          <tr><td>Ulaştığınız en yüksek bölüm</td><td>Tüm oyuncular</td><td>Sıralamadaki yerinizi belirlemek</td></tr>
+          <tr><td>Rastgele oluşturulan anonim kullanıcı kimliği</td><td>Kimse (sadece sistem)</td><td>Kaydı yalnızca sizin güncelleyebilmenizi sağlamak</td></tr>
+          <tr><td>Son güncelleme zamanı</td><td>Kimse (sadece sistem)</td><td>Hileli kayıtları önlemek</td></tr>
+          <tr><td>Şikayet kayıtları (şikayet edilen ad, şikayet eden ve edilen anonim kimlik)</td><td>Yalnızca geliştirici</td><td>Uygunsuz kullanıcı adlarını incelemek</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Bu veriler Google'ın <strong>Firebase</strong> hizmetinde (Cloud Firestore) saklanır ve
+      Google'ın güvenlik standartlarıyla korunur. Anonim kimlik, telefon değiştirdiğinizde aynı
+      kullanıcı adıyla devam edebilmeniz için Google Play Games bulut kaydınıza da yedeklenir.
+      Gerçek adınızı, e-posta adresinizi veya cihaz bilgilerinizi bu sisteme göndermiyoruz.
+    </p>
+    <p>
+      <strong>Uygunsuz kullanıcı adları:</strong> Küfür, hakaret ve benzeri içeren adlar
+      oyun tarafından engellenir. Sıralamadaki bir adı her oyuncu şikayet edebilir; şikayet
+      edilen adları inceler, kurallara aykırı olanları ve ilgili sıralama kaydını sileriz.
+      İncelenen şikayet kayıtları silinir.
+    </p>
+  </section>
+
+  <section id="hesap-silme">
+    <h2><span class="num">07</span> Hesap ve veri silme</h2>
+    <p>
+      Sıralama hesabınızı ve ona bağlı tüm verileri (kullanıcı adı, en yüksek bölüm,
+      anonim kimlik) dilediğiniz zaman silebilirsiniz:
+    </p>
+    <ul>
+      <li><strong>Oyunun içinden:</strong> Ana ekran → ⚙️ Ayarlar → <strong>Sıralama hesabımı sil</strong>.
+        Silme işlemi anında gerçekleşir ve geri alınamaz. Oyun ilerlemeniz bundan etkilenmez.</li>
+      <li><strong>E-posta ile:</strong> Uygulamaya artık erişiminiz yoksa
+        <a href="mailto:furkanarfat25@gmail.com?subject=Prizmora%20hesap%20silme%20talebi">furkanarfat25@gmail.com</a>
+        adresine "Prizmora hesap silme talebi" konulu bir e-posta gönderin ve kullanıcı adınızı yazın.
+        Talebiniz en geç 30 gün içinde işlenir ve sıralama hesabınıza ait tüm veriler silinir.</li>
+    </ul>
+    <p>
+      Cihazınızdaki oyun verileri için "Haklarınız" bölümüne, Google Play Games bulut kaydı için
+      "Google Play Games" bölümüne bakabilirsiniz.
+    </p>
+  </section>
+
   <section id="cocuklar">
-    <h2><span class="num">06</span> Çocukların gizliliği</h2>
+    <h2><span class="num">08</span> Çocukların gizliliği</h2>
     <p>
       Prizmora, genel kitleye yönelik bir bulmaca oyunudur ve 13 yaş altı
       çocuklardan bilerek kişisel veri toplamaz. Uygulamayı çocuğunuzun
@@ -367,17 +424,17 @@
   </section>
 
   <section id="guvenlik">
-    <h2><span class="num">07</span> Veri güvenliği</h2>
+    <h2><span class="num">09</span> Veri güvenliği</h2>
     <p>
-      Doğrudan bizim topladığımız bir sunucu tarafı veri olmadığı için, veri
-      ihlali riski büyük ölçüde ortadan kalkar — çünkü aktarılan/depolanan
-      merkezi bir veritabanı yoktur. Reklam SDK'sı (Unity Ads) tarafındaki
-      veri güvenliği Unity'nin kendi standartlarına tabidir.
+      Sunucuda sakladığımız tek veri, isteğe bağlı sıralamadaki kullanıcı adı, en yüksek bölüm
+      ve anonim kimliktir. Bu veriler Google Firebase'de, şifreli bağlantı (HTTPS) üzerinden
+      aktarılır ve yalnızca kaydın sahibinin değiştirebileceği güvenlik kurallarıyla korunur.
+      Reklam SDK'sı (Unity Ads) tarafındaki veri güvenliği Unity'nin kendi standartlarına tabidir.
     </p>
   </section>
 
   <section id="haklariniz">
-    <h2><span class="num">08</span> Haklarınız</h2>
+    <h2><span class="num">10</span> Haklarınız</h2>
     <p>
       Cihazınızda tutulan tüm oyun verileri üzerinde tam kontrol sizdedir:
     </p>
@@ -387,12 +444,13 @@
       <li>Kişiselleştirilmiş reklam iznini oyunun Ayarlar → Gizlilik Seçenekleri bölümünden istediğiniz zaman değiştirebilirsiniz.</li>
       <li>Reklam kimliğinizi cihazınızın Ayarlar → Gizlilik → Reklamlar bölümünden silebilirsiniz.</li>
       <li>Bildirimleri cihazınızın uygulama ayarlarından kapatabilirsiniz.</li>
-      <li>Google Play Games ile paylaşılan sıralama ve bulut kaydı verilerinizi Play Games profil ayarlarınızdan veya Google Hesabım sayfasından silebilirsiniz.</li>
+      <li>Sıralama hesabınızı ve kullanıcı adınızı oyunun Ayarlar → Sıralama hesabımı sil bölümünden ya da e-posta ile silebilirsiniz (bkz. "Hesap ve veri silme").</li>
+      <li>Google Play Games bulut kaydı verilerinizi Play Games profil ayarlarınızdan veya Google Hesabım sayfasından silebilirsiniz.</li>
     </ul>
   </section>
 
   <section id="degisiklikler">
-    <h2><span class="num">09</span> Politika değişiklikleri</h2>
+    <h2><span class="num">11</span> Politika değişiklikleri</h2>
     <p>
       Bu politika zaman zaman güncellenebilir (örneğin yeni bir özellik veya
       reklam formatı eklendiğinde). Önemli değişikliklerde bu sayfadaki
@@ -402,7 +460,7 @@
   </section>
 
   <section id="iletisim">
-    <h2><span class="num">10</span> İletişim</h2>
+    <h2><span class="num">12</span> İletişim</h2>
     <p>
       Bu politikayla ilgili sorularınız için bize ulaşabilirsiniz:
     </p>
